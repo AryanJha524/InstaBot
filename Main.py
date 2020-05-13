@@ -26,7 +26,9 @@ class InstagramBot:
     def logout(self):
         time.sleep(3)
         self.browser.get(str(self.browser.current_url) + str(self.username))  # change to profile page
+        self.browser.find_element_by_css_selector('#react-root > section > main > div > header > section > div.nZSzR > div > button').click()
         time.sleep(3)
+        self.browser.find_element_by_css_selector('body > div.RnEpo.Yx5HN > div > div > div > button:nth-child(9)').click()
         self.browser.quit()
 
 
